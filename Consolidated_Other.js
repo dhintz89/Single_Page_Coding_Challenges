@@ -7,7 +7,8 @@ const additions = [
   {repo: "VisualStore", message: "remove devise-jwt code and replace with customized devise for Registration Controller", link: "https://github.com/dhintz89/visual_store/commit/295554e9943cbca9f6deffe9bc0f370c73b19da3"},
   {repo: "VisualStore", message: "remove devise-jwt and replace with custom devise for SessionsController, add generate_jwt to User", link: "https://github.com/dhintz89/visual_store/commit/a5895ea6821d61f2dfb3b88f35bab63d62ec47fe"},
   {repo: "VisualStore", message: "change JWT delivery method from JSON/LocalStorage to httpOnly cookie", link: "https://github.com/dhintz89/visual_store/commit/df3e8494bedcb901e96513fa2129e0779b277181"},
-  {repo: "VisualStore", message: "change frontend fetch calls to include credentials", link: "https://github.com/dhintz89/visual_store/commit/b3f298316e8ebde0d4f2038ecc488553f862fbf7"}
+  {repo: "VisualStore", message: "change frontend fetch calls to include credentials", link: "https://github.com/dhintz89/visual_store/commit/b3f298316e8ebde0d4f2038ecc488553f862fbf7"},
+  {repo: "VisualStore", message: "move back to localStorage solution. Registration works.", link: "https://github.com/dhintz89/visual_store/commit/e68986074610ae0e1356430d3b5ab6ff58bf6568"}
 ]
 
 function postCommits() {
