@@ -1,0 +1,49 @@
+### Using lambdas in iterators
+
+# create a lambda
+half = ->(numerator) {
+    if numerator % 2 === 0
+        return numerator / 2
+    end
+    return "#{numerator} can't be halved evenly"
+}
+
+# create some arrays for iteration
+numarry = [0, 1, 2, 3, 4]
+textarry = ["a", "b", "c"]
+
+# call lambda in iterator
+puts numarry.map(&half)
+
+# call built-in Ruby function in iterator
+puts textarry.map(&:upcase)
+puts
+puts
+
+# define method on global Object
+def double(num)
+  num * 2
+end
+
+# what object owns #double vs #half
+puts method(:double).owner
+puts half.class
+puts
+puts
+
+# what is the ancestry of each owner object
+puts Object.ancestors
+puts
+puts Proc.ancestors
+puts
+puts
+
+
+# modify Integer class to include double method
+class Integer
+  def double
+    self * 2
+  end
+end
+
+puts numarry.map(&:double)
