@@ -9,7 +9,8 @@ const additions = [
   {repo: "VisualStore", message: "change JWT delivery method from JSON/LocalStorage to httpOnly cookie", link: "https://github.com/dhintz89/visual_store/commit/df3e8494bedcb901e96513fa2129e0779b277181"},
   {repo: "VisualStore", message: "change frontend fetch calls to include credentials", link: "https://github.com/dhintz89/visual_store/commit/b3f298316e8ebde0d4f2038ecc488553f862fbf7"},
   {repo: "VisualStore", message: "move back to localStorage solution. Registration works.", link: "https://github.com/dhintz89/visual_store/commit/e68986074610ae0e1356430d3b5ab6ff58bf6568"},
-  {repo: "VisualStore", message: "signUp, signIn, and signOut all working", link: "https://github.com/dhintz89/visual_store/commit/2db5eb385261d9bcc151cc75c92eae4fbb095652"}
+  {repo: "VisualStore", message: "signUp, signIn, and signOut all working", link: "https://github.com/dhintz89/visual_store/commit/2db5eb385261d9bcc151cc75c92eae4fbb095652"},
+  {repo: "whats_cookin_backend", message: "setup shoplist_mailer in Rails", link: "https://github.com/dhintz89/whats_cookin_backend/commit/1310c9ef201a18cd156f1dd7458b85846fcc0435"}
 ]
 
 function postCommits() {
