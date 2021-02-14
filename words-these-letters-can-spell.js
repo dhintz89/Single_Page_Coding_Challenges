@@ -87,3 +87,40 @@ function numKeypadSolutions(wordlist, keypads) {
     
   return output;
 }
+
+
+
+// same as Array method, but convert to a Set (reduces to only unique letters in each word)
+function numKeypadSolutions(wordlist, keypads) {
+    // output is per keypad: default each keypad counter to 0 & increment each time word can be spelled
+    const output = [];
+    keypads.forEach(key => {
+      output.push(0);
+    });
+    
+    // loop through keypads since these are symbolized by the output array
+    keypads.forEach((key, k) => {
+      // break keypad into Set
+      let kSet = new Set(key);
+      // console.log("k: " + kSet);
+      
+      // loop through words
+      wordlist.forEach((word, w) => {
+        // check for firstLetter - if not present, move on
+        if(word.includes(key[0])) {
+          // break word into Set
+          let wSet = new Set(word);
+          // console.log("w: " + wSet);
+          // find intersecting data (letters that are in both word and keypad)
+          let intersect = new Set([...wSet].filter(letter=> (kSet.has(letter))));
+          // check if size of word Set is the same as the intersect (all letters counted)
+          // console.log(intersect.size + " | " + wSet.size)
+          if(intersect.size === wSet.size) {
+            output[k] += 1; // increment keypad counter
+          } // do nothing (don't increment) if all letters from word set are not found in intersect
+        } // do nothing (don't increment) if 1st letter is not present in word
+      }) // end word, go to next
+    }) // end keypad, go to next
+    
+  return output;
+}
